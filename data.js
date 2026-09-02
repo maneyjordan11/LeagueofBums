@@ -45,7 +45,7 @@ const league = {
       "Mosaic Fantasies",
       "Charismatic Football Club",
       "Dumpster Fire",
-      "Bye Week",
+      "League of Haters",
     ],
     blurbs: {
       // "The Barn Yard": 'Add a custom blurb here to override the default record line.',
