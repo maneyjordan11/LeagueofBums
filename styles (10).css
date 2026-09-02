@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=Chivo+Mono:wght@500;700;900&display=swap');
+
+:root{
+  font-family:'Barlow Condensed',Arial,sans-serif;
+  color:#1a1a1a;
+  background:#f7f3ea;
+  font-synthesis:none;
+  --white:#ffffff;
+  --cream:#f7f3ea;
+  --panel:#ffffff;
+  --panel2:#f2ede0;
+  --ink:#1a1a1a;
+  --line:#e2dccb;
+  --red:#d0021b;
+  --red2:#eb1c33;
+  --orange:#c15f27;
+  --orange2:#d97b2e;
+  --muted:#6b6558;
+}
+*{box-sizing:border-box}
+html,body,#root{min-height:100%;margin:0}
+body{
+  background:
+    radial-gradient(circle at 12% 0%, rgba(208,2,27,.05), transparent 40%),
+    radial-gradient(circle at 100% 25%, rgba(193,95,39,.06), transparent 45%),
+    var(--cream);
+}
+button{font:inherit}
+button,a{cursor:pointer}
+.wrap{max-width:1140px;margin:auto;padding:0 20px}
+.narrow{max-width:880px}
+
+/* ---------- Pill-ring divider (evokes the oval logo ring) ---------- */
+.section{position:relative;padding:58px 0}
+.section:before{
+  content:"";
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:120px;height:6px;border-radius:999px;
+  background:linear-gradient(90deg,var(--red),var(--orange));
+}
+.section.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel2)}
+
+/* ---------- Topbar ---------- */
+.topbar{
+  background:var(--white);
+  border-bottom:3px solid var(--red);
+  position:sticky;top:0;z-index:50;
+  box-shadow:0 1px 0 var(--orange);
+}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{
+  border:0;background:none;color:var(--ink);
+  font:900 26px Anton,Arial Narrow,sans-serif;
+  letter-spacing:.02em;padding:8px 16px;
+  display:flex;align-items:center;gap:.28em;
+  text-transform:uppercase;
+  background:var(--red);
+  color:#fff;
+  border-radius:999px;
+  border:3px solid var(--orange);
+}
+.brand span{color:#ffe3b0}
+.brand .brand-rest{color:#fff}
+.links{display:flex;align-items:center;gap:4px}
+.links button{
+  border:0;background:transparent;color:var(--muted);
+  padding:9px 16px;
+  font:700 14px 'Barlow Condensed',sans-serif;
+  text-transform:uppercase;letter-spacing:.07em;
+  border-radius:999px;
+}
+.links button:hover{background:var(--panel2);color:var(--ink)}
+.links button.active{background:var(--red);color:#fff}
+.mobile-menu{display:none;background:var(--panel2);border:1px solid var(--line);color:var(--ink);width:38px;height:38px;border-radius:999px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);padding:88px 0 70px}
+.hero.small{padding:58px 0 50px;background:var(--panel2)}
+.eyebrow,.label,.tag{
+  font:800 12px 'Chivo Mono',monospace;
+  text-transform:uppercase;letter-spacing:.14em;color:var(--orange);
+}
+h1,h2,h3{font-family:Anton,'Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.01em;font-weight:400;color:var(--ink)}
+h1{font-size:clamp(46px,8vw,92px);line-height:.86;margin:16px 0 0}
+h1 span{color:var(--red)}
+h2{font-size:32px;margin:0}
+h3{font-size:23px;margin:0}
+.lead{max-width:700px;color:var(--muted);font-size:19px;line-height:1.55;margin:22px 0;font-family:'Barlow Condensed';font-weight:500}
+.buttons{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Pill buttons (echoes the oval logo shape) */
+.btn{
+  border:3px solid var(--red);
+  background:var(--red);
+  color:#fff;padding:13px 24px;
+  font:800 13px 'Barlow Condensed',sans-serif;
+  text-transform:uppercase;letter-spacing:.08em;
+  border-radius:999px;
+}
+.btn:hover{background:var(--red2);border-color:var(--red2)}
+.btn.alt{
+  background:var(--white);
+  color:var(--ink);
+  border:3px solid var(--orange);
+}
+.btn.alt:hover{background:var(--panel2)}
+
+/* ---------- Cards ---------- */
+.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}
+.sectionhead-title{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.sponsor-tag{
+  font:800 11px 'Chivo Mono',monospace;
+  text-transform:uppercase;letter-spacing:.1em;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:4px 10px;
+  white-space:nowrap;
+}
+.cards{display:grid;gap:14px}
+.cards.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cards.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cards.five{grid-template-columns:repeat(5,minmax(0,1fr))}
+.card{
+  display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;
+  text-align:left;position:relative;
+  border:2px solid var(--line);
+  background:var(--panel);
+  color:var(--ink);padding:26px 22px 22px;
+  transition:.16s;
+  border-radius:18px;
+}
+.card:hover{border-color:var(--orange);transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+.card:before{
+  content:"";position:absolute;top:20px;left:22px;
+  width:34px;height:8px;border-radius:999px;
+  background:linear-gradient(90deg,var(--red),var(--orange));
+}
+.card h2{margin-top:34px;font-size:23px}
+.card p,.article p,.copy{color:var(--muted);line-height:1.6;font-family:'Barlow Condensed';font-size:16px}
+.topgap{margin-top:20px}
+
+/* ---------- Rank rows ---------- */
+.rank{
+  display:grid;grid-template-columns:56px 1fr 60px;align-items:center;gap:14px;
+  margin:8px 0;padding:14px 18px;
+  border:2px solid var(--line);border-radius:14px;
+  background:var(--panel);
+}
+.ranknum{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--red);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font:900 20px Anton;
+  border:3px solid var(--orange);
+}
+.team-link{padding:0;border:0;background:none;color:var(--ink);font-weight:700;text-align:left;font-family:'Barlow Condensed';font-size:17px;text-transform:uppercase;letter-spacing:.02em}
+.team-link:hover{color:var(--red)}
+.team-link.big{display:block;font:400 26px Anton;text-transform:uppercase;margin-top:8px;color:var(--ink)}
+.sub{font-size:13px;color:var(--muted);margin-top:3px;font-family:'Barlow Condensed'}
+.trend{text-align:right;font:900 16px 'Chivo Mono'}
+.trend.up{color:#1a8f4c}
+.trend.down{color:var(--red)}
+.trend.same{color:var(--muted)}
+
+/* Matchup panel */
+.match{
+  border:2px solid var(--line);border-radius:16px;
+  background:var(--panel);
+  padding:0;overflow:hidden;
+}
+.matchrow{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:14px 20px}
+.matchrow button{font:700 16px 'Barlow Condensed';text-transform:uppercase;letter-spacing:.02em;color:var(--muted)}
+.score{
+  font:900 18px 'Chivo Mono';color:var(--ink);
+  background:var(--panel2);padding:4px 12px;border-radius:999px;
+  min-width:44px;text-align:center;
+}
+.winner{color:var(--red) !important}
+.dash{border-top:1px dashed var(--line)}
+.upcoming{
+  padding:9px 20px;background:linear-gradient(90deg,var(--red),var(--orange));
+  color:#fff;font:800 10px 'Chivo Mono';text-transform:uppercase;letter-spacing:.14em;
+}
+
+.articles{display:flex;flex-direction:column;gap:12px}
+.article{border:2px solid var(--line);border-radius:16px;background:var(--panel);padding:24px;border-left:5px solid var(--red)}
+.article h3{margin-top:7px}
+.trade-sides{display:grid;gap:14px;margin-top:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.trade-side{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--panel2)}
+.trade-side .sub{margin-top:6px;line-height:1.5}
+.empty{border:2px dashed var(--line);border-radius:16px;padding:34px;text-align:center;color:var(--muted);font-size:15px;font-family:'Barlow Condensed'}
+.champion{border-color:var(--orange)}
+.champion:before{background:linear-gradient(90deg,var(--orange),var(--red))}
+.mono{color:var(--muted);font:800 12px 'Chivo Mono';text-transform:uppercase;letter-spacing:.06em;margin-top:5px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.tags button{background:var(--panel2);border:0;color:var(--muted);padding:6px 12px;border-radius:999px;font:600 12px 'Barlow Condensed'}
+.tags button:hover{background:var(--red);color:#fff}
+
+.history-table{margin-top:20px;overflow-x:auto;border:2px solid var(--line);border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:620px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--panel2);color:var(--muted);font:700 12px 'Barlow Condensed';text-transform:uppercase;letter-spacing:.08em}
+td{color:var(--ink);font-size:15px;font-family:'Barlow Condensed'}
+.text-link{border:0;background:none;padding:0;color:var(--red);font:800 12px 'Chivo Mono';text-transform:uppercase;letter-spacing:.08em}
+.text-link:hover{color:var(--orange)}
+
+.podcast{border:2px solid var(--line);border-radius:16px;overflow:hidden;background:var(--panel)}
+.podcast iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:var(--panel2)}
+.podcast-placeholder{display:flex;aspect-ratio:16/9;align-items:center;justify-content:center;color:var(--red);font:800 13px 'Chivo Mono';background:var(--panel2)}
+.pod-info{padding:22px}
+.pod-info h2{margin-top:7px}
+.pod-info p{color:var(--muted);line-height:1.6;font-family:'Barlow Condensed'}
+
+.team-card{min-height:220px}
+.team-logo{width:56px;height:56px;object-fit:contain}
+.initials,.team-badge{
+  display:flex;align-items:center;justify-content:center;
+  border:3px solid var(--orange);
+  font:900 22px Anton;color:#fff;
+  background:var(--red);
+  border-radius:50%;
+}
+.initials{width:56px;height:56px}
+
+.team-hero{padding:56px 0;border-bottom:1px solid var(--line);background:var(--panel2)}
+.team-title{display:flex;align-items:center;gap:18px;margin-top:18px}
+.team-title h1{font-size:46px;margin:0}
+.team-badge{width:68px;height:68px}
+.team-badge img{width:100%;height:100%;object-fit:contain;border-radius:50%}
+
+/* ---------- Live schedule teaser (Season page) ---------- */
+.live-teaser{
+  border:2px dashed var(--line);border-radius:16px;
+  padding:26px;text-align:center;background:var(--panel);
+}
+.live-teaser p{color:var(--muted);margin:0 0 16px;font-family:'Barlow Condensed';font-size:16px}
+.live-teaser .buttons{justify-content:center}
+
+/* ---------- Week tabs (Schedule page) ---------- */
+.week-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.week-tabs button{
+  border:2px solid var(--line);background:var(--panel);color:var(--muted);
+  padding:8px 14px;border-radius:999px;
+  font:800 12px 'Chivo Mono',monospace;letter-spacing:.05em;
+}
+.week-tabs button:hover{border-color:var(--orange);color:var(--ink)}
+.week-tabs button.active{background:var(--red);border-color:var(--red);color:#fff}
+.week-tabs button.current:not(.active){border-color:var(--orange);color:var(--orange)}
+
+/* ---------- Head-to-head picker ---------- */
+.h2h-picker{display:flex;align-items:center;gap:16px;margin-bottom:10px}
+.h2h-select{
+  flex:1;padding:12px 14px;border-radius:12px;
+  border:2px solid var(--line);background:var(--panel);color:var(--ink);
+  font:700 15px 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;
+}
+.h2h-select:focus{outline:none;border-color:var(--orange)}
+.h2h-vs{font:900 14px 'Chivo Mono',monospace;color:var(--orange)}
+@media(max-width:640px){
+  .h2h-picker{flex-direction:column;align-items:stretch}
+  .h2h-vs{text-align:center}
+}
+
+.footer{
+  margin-top:20px;border-top:4px solid var(--red);
+  background:var(--ink);
+  padding:26px 0;color:#c9c4b6;font-size:12px;
+}
+.footer .wrap{display:flex;justify-content:space-between;gap:20px}
+.footer strong{color:#fff;font:400 20px Anton;letter-spacing:.02em}
+.footer span{font:700 11px 'Chivo Mono'}
+
+@media(max-width:900px){
+  .cards.five{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cards.three{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .links{display:none}
+  .links.open{display:flex;position:absolute;left:0;right:0;top:68px;background:var(--white);border-top:1px solid var(--line);padding:12px 20px;flex-direction:column;align-items:stretch}
+  .mobile-menu{display:block}
+}
+@media(max-width:640px){
+  .cards.two,.cards.three,.cards.five{grid-template-columns:1fr}
+  .hero{padding:55px 0 50px}
+  .hero.small{padding:46px 0}
+  .section{padding:40px 0}
+  .sectionhead{align-items:flex-start;flex-direction:column}
+  .rank{grid-template-columns:48px 1fr 45px}
+  .team-title h1{font-size:36px}
+  .footer .wrap{flex-direction:column}
+}
