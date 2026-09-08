@@ -69,7 +69,7 @@ function Nav(current) {
 function Footer() {
   return el('footer', { class: 'footer' }, el('div', { class: 'wrap' }, [
     el('strong', {}, 'LEAGUE OF BUMS'),
-    el('span', {}, 'EST. 2018 · FANTASY FOOTBALL, BARELY MANAGED'),
+    el('span', {}, 'EST. 2024 · FAKE FOOTBALL, REAL BUMS'),
   ]))
 }
 
@@ -90,16 +90,16 @@ function Empty(label) {
 function Home() {
   const cardsData = [
     ['01', '2026 Season', 'Power rankings, head-to-head matchups, and weekly previews.', 'season'],
-    ['02', 'ManeyCast', 'The official league podcast. New episodes, straight from the Drive.', 'podcast'],
+    ['02', 'ManeyCast', 'The official league podcast. New episodes every Tuesday because Jordan only works on Sundays.', 'podcast'],
     ['03', 'League History', 'Past champions, every trade ever recorded, and full team histories.', 'history'],
-    ['04', 'Awards', 'Glory and infamy. Sharpest GM to the Wooden Spoon.', 'awards'],
-    ['05', 'Teams', 'Every roster, every manager, every bad decision, catalogued.', 'teams'],
+    ['04', 'Awards', 'Glory and infamy. Smartest GM to the Biggest Bum.', 'awards'],
+    ['05', 'Teams', 'Every roster, every manager, every bad decision, ever.', 'teams'],
   ]
   return el('div', {}, [
     el('section', { class: 'hero' }, el('div', { class: 'wrap' }, [
-      el('div', { class: 'eyebrow' }, 'EST. 2018 · TEN MANAGERS · ZERO SELF-AWARENESS'),
+      el('div', { class: 'eyebrow' }, 'EST. 2024 · FAKE FOOTBALL · REAL BUMS'),
       el('h1', {}, [el('span', {}, 'LEAGUE'), el('br'), 'OF ', el('span', {}, 'BUMS')]),
-      el('p', { class: 'lead' }, "The official home of a fantasy football league that takes waiver claims far more seriously than it takes itself. Rankings, matchups, trades, and a podcast nobody asked for but everybody listens to."),
+      el('p', { class: 'lead' }, "The official home of a fantasy football league that is full of bums. Rankings, matchups, trades, and a ManeyCast that everybody, well mostly everybody, listens to."),
       el('div', { class: 'buttons' }, [
         el('button', { class: 'btn', onclick: () => go('season') }, 'VIEW 2026 SEASON'),
         el('button', { class: 'btn alt', onclick: () => go('podcast') }, 'VISIT MANEYCAST'),
@@ -216,7 +216,7 @@ function Podcast() {
     : Empty('No episodes uploaded yet. Add your Google Drive episodes in data.js.')
 
   return el('div', {}, [
-    Hero('THE OFFICIAL PODCAST', 'MANEYCAST', 'Weekly reactions, trade breakdowns, and league gossip — recorded, uploaded, and occasionally coherent.', true),
+    Hero('THE OFFICIAL PODCAST', 'MANEYCAST', 'Weekly reactions, trade breakdowns, and league drama — recorded, uploaded, and incredibly professional.', true),
     el('section', { class: 'section' }, el('div', { class: 'wrap narrow' }, content)),
   ])
 }
