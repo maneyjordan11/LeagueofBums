@@ -90,7 +90,7 @@ function Empty(label) {
 function Home() {
   const cardsData = [
     ['01', '2026 Season', 'Power rankings, head-to-head matchups, and weekly previews.', 'season'],
-    ['02', 'ManeyCast', 'The official league podcast. New episodes every Tuesday because Jordan only works on Sundays.', 'podcast'],
+    ['02', 'ManeyCast', 'New episodes every Tuesday because Jordan only works on Sundays.', 'podcast'],
     ['03', 'League History', 'Past champions, every trade ever recorded, and full team histories.', 'history'],
     ['04', 'Awards', 'Glory and infamy. Smartest GM to the Biggest Bum.', 'awards'],
     ['05', 'Teams', 'Every roster, every manager, every bad decision, ever.', 'teams'],
