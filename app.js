@@ -99,7 +99,7 @@ function Home() {
     el('section', { class: 'hero' }, el('div', { class: 'wrap' }, [
       el('div', { class: 'eyebrow' }, 'EST. 2024 · FAKE FOOTBALL · REAL BUMS'),
       el('h1', {}, [el('span', {}, 'LEAGUE'), el('br'), 'OF ', el('span', {}, 'BUMS')]),
-      el('p', { class: 'lead' }, "The official home of a fantasy football league that is full of bums. Rankings, matchups, trades, and a ManeyCast that everybody, well, mostly everybody, listens to."),
+      el('p', { class: 'lead' }, "The official home of a fantasy football league that is full of bums. Rankings, matchups, trades, and a ManeyCast that everybody (but Matt) listens to."),
       el('div', { class: 'buttons' }, [
         el('button', { class: 'btn', onclick: () => go('season') }, 'VIEW 2026 SEASON'),
         el('button', { class: 'btn alt', onclick: () => go('podcast') }, 'VISIT MANEYCAST'),
