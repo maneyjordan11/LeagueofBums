@@ -99,7 +99,7 @@ function Home() {
     el('section', { class: 'hero' }, el('div', { class: 'wrap' }, [
       el('div', { class: 'eyebrow' }, 'EST. 2024 · FAKE FOOTBALL · REAL BUMS'),
       el('h1', {}, [el('span', {}, 'LEAGUE'), el('br'), 'OF ', el('span', {}, 'BUMS')]),
-      el('p', { class: 'lead' }, "The official home of a fantasy football league that is full of bums. Rankings, matchups, trades, and a ManeyCast that everybody, well mostly everybody, listens to."),
+      el('p', { class: 'lead' }, "The official home of a fantasy football league that is full of bums. Rankings, matchups, trades, and a ManeyCast that everybody, well, mostly everybody, listens to."),
       el('div', { class: 'buttons' }, [
         el('button', { class: 'btn', onclick: () => go('season') }, 'VIEW 2026 SEASON'),
         el('button', { class: 'btn alt', onclick: () => go('podcast') }, 'VISIT MANEYCAST'),
@@ -170,7 +170,7 @@ async function Season() {
     : Empty('No previews written yet.')
 
   return el('div', {}, [
-    Hero(`${league.season} SEASON`, "RANKINGS, RIVALRIES & RECKONINGS", "Everything happening in League of Bums right now: who's actually good, who's playing who, and what to expect before kickoff.", true),
+    Hero(`${league.season} SEASON`, "RANKINGS, RIVALRIES & RECKONINGS", "Everything happening in League of Bums right now: who's actually good, who's faking it, and who is really a bum.", true),
     el('section', { class: 'section' }, el('div', { class: 'wrap' }, [
       el('div', { class: 'sectionhead' }, [
         el('div', { class: 'sectionhead-title' }, [
